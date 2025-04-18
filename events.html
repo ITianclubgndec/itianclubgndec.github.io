@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | ITIAN Club</title>
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/png" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        width: 100%;
+        height: 2px;
+        background-color: #2563eb;
+        transition: transform 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-blue-50 to-blue-100 text-gray-900 py-20 text-center"
+    >
+      <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-5xl font-extrabold mb-4 text-blue-800">Our Events</h1>
+        <p class="text-lg text-gray-700">
+          Explore workshops, competitions, and community gatherings organized by
+          ITIAN Club.
+        </p>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="py-16 bg-gradient-to-br from-white-100 to-blue-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">
+          All Events
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Event Card Template -->
+          <div
+            class="bg-blue-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/hackathon-poster.jpg"
+              alt="Hackathon 2025 Poster"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">
+                Hackathon 2025
+              </h3>
+              <p class="text-gray-800">
+                A 24-hour coding marathon. Solve real-world problems and win
+                exciting prizes.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-purple-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/techtalk-poster.jpg"
+              alt="Tech Talk Series Poster"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-purple-700">
+                Tech Talk Series
+              </h3>
+              <p class="text-gray-800">
+                Guest speakers from the industry share insights on emerging tech
+                trends.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-green-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/ai-workshop.jpg"
+              alt="AI Workshop Poster"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-green-700">
+                AI & ML Workshop
+              </h3>
+              <p class="text-gray-800">
+                Hands-on introduction to artificial intelligence and machine
+                learning tools.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-yellow-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/cybersecurity-bootcamp.jpg"
+              alt="Cybersecurity Bootcamp Poster"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-yellow-700">
+                Cybersecurity Bootcamp
+              </h3>
+              <p class="text-gray-800">
+                Learn about ethical hacking, online threats, and securing your
+                digital identity.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-red-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/gamedev-jam.jpg"
+              alt="GameDev Jam Poster"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-red-700">
+                GameDev Jam
+              </h3>
+              <p class="text-gray-800">
+                Collaborate and create games in 48 hours. All skill levels
+                welcome!
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-indigo-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/tech-quiz.jpg"
+              alt="Tech Quiz Poster"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-indigo-700">
+                Tech Quiz 2025
+              </h3>
+              <p class="text-gray-800">
+                Test your knowledge on tech topics and win goodies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load Navbar and Footer with jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("#navbar-placeholder").load(
+          "./assets/layouts/header.html",
+          function () {
+            const menuBtn = document.getElementById("menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            if (menuBtn && mobileMenu) {
+              menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+              });
+            }
+          }
+        );
+
+        $("#footer-placeholder").load("./assets/layouts/footer.html");
+      });
+    </script>
+  </body>
+</html>
