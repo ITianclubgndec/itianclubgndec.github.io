@@ -1,46 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>404 Not Found</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Members | ITIAN Club</title>
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/png" />
+
     <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Courier New", Courier, monospace;
-        background-color: #ffffff;
-        color: #000000;
+      html {
+        scroll-behavior: smooth;
       }
 
-      .container {
-        max-width: 100%;
-        margin: 10% auto;
-        text-align: center;
+      .nav-link {
+        position: relative;
       }
 
-      h1 {
-        font-size: 32px;
-        margin-bottom: 20px;
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        width: 100%;
+        height: 2px;
+        background-color: #2563eb;
+        transition: transform 0.3s ease;
       }
 
-      p {
-        font-size: 16px;
-        margin-top: 10px;
-      }
-
-      .divider {
-        border-top: 1px solid #e0e0e0;
-        margin: 20px 0;
+      .nav-link:hover::after {
+        transform: translateX(-50%) scaleX(1);
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-      <h1>404 Not Found</h1>
-      <div class="divider"></div>
-      <p>nginx/1.18.0</p>
-      <!-- <p>(Ubuntu 22.04 LTS)</p> -->
+
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-blue-50 to-blue-100 text-gray-900 py-20 text-center"
+    >
+      <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-5xl font-extrabold mb-4 text-blue-800">
+          Meet the Team
+        </h1>
+        <p class="text-lg text-gray-700">
+          The driving force behind the ITIAN Club – passionate, curious, and
+          ready to innovate.
+        </p>
+      </div>
+    </section>
+
+    <!-- Faculty Advisors -->
+    <section class="py-16 bg-gradient-to-br from-white-100 to-blue-50">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">
+          Faculty Advisors
+        </h2>
+    <div class="grid gap-10 sm:grid-cols-2 justify-center">
+      <!-- Faculty Card 1 -->
+      <div
+        class="bg-white rounded-xl shadow hover:shadow-lg transition text-center p-6"
+      >
+        <img
+          src="./assets/images/faculty/faculty1.jpg"
+          alt="Faculty 1"
+          class="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+        />
+        <h3 class="text-xl font-semibold text-blue-700">Dr. Kulvinder Singh Mann</h3>
+        <p class="text-gray-600">Professor & Head - Dept. of IT</p>
+        <p class="text-gray-500 text-sm mt-2">Department of Computer Science</p>
+      </div>
+
+      <!-- Faculty Card 2 -->
+      <div
+        class="bg-white rounded-xl shadow hover:shadow-lg transition text-center p-6"
+      >
+        <img
+          src="./assets/images/faculty/faculty2.jpg"
+          alt="Faculty 2"
+          class="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+        />
+        <h3 class="text-xl font-semibold text-blue-700">Er. Harminder Kaur</h3>
+        <p class="text-gray-600">Faculty Mentor</p>
+        <p class="text-gray-500 text-sm mt-2">Faculty Incharge</p>
+      </div>
     </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="py-16 bg-gradient-to-br from-white-100 to-blue-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-blue-800 mb-12">
+          Core Members
+        </h2>
+
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Member Card -->
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition text-center p-6"
+          >
+            <img
+              src="./assets/images/members/member1.jpg"
+              alt="Member 1"
+              class="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-700">Aarav Sharma</h3>
+            <p class="text-gray-600">President</p>
+            <div class="mt-3 space-x-3">
+              <a href="#" class="text-blue-500 hover:text-blue-700"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a href="#" class="text-gray-600 hover:text-gray-800"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Member Card -->
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition text-center p-6"
+          >
+            <img
+              src="./assets/images/members/member2.jpg"
+              alt="Member 2"
+              class="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-700">Diya Patel</h3>
+            <p class="text-gray-600">Vice President</p>
+            <div class="mt-3 space-x-3">
+              <a href="#" class="text-blue-500 hover:text-blue-700"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a href="#" class="text-gray-600 hover:text-gray-800"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Member Card -->
+          <div
+            class="bg-white rounded-xl shadow hover:shadow-lg transition text-center p-6"
+          >
+            <img
+              src="./assets/images/members/member3.jpg"
+              alt="Member 3"
+              class="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-700">Rohan Das</h3>
+            <p class="text-gray-600">Technical Lead</p>
+            <div class="mt-3 space-x-3">
+              <a href="#" class="text-blue-500 hover:text-blue-700"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a href="#" class="text-gray-600 hover:text-gray-800"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Add more members as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load Navbar and Footer with jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("#navbar-placeholder").load(
+          "./assets/layouts/header.html",
+          function () {
+            const menuBtn = document.getElementById("menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            if (menuBtn && mobileMenu) {
+              menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+              });
+            }
+          }
+        );
+
+        $("#footer-placeholder").load("./assets/layouts/footer.html");
+      });
+    </script>
   </body>
 </html>
