@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITIAN Club</title>
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/png" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Custom Style -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .parallax {
+        background-image: url("./assets/images/TeamImg.png");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .parallax::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+      }
+
+      .parallax > div {
+        position: relative;
+        z-index: 1;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        width: 100%;
+        height: 2px;
+        background-color: #2563eb;
+        transition: transform 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Parallax Hero Section -->
+    <section
+      id="landing"
+      class="parallax h-screen flex items-center justify-center text-white"
+    >
+      <div class="p-8 text-center">
+        <h2 class="text-5xl font-extrabold mb-4">Welcome to the ITIAN Club</h2>
+        <p class="text-xl mb-6">Learn with Us, Grow with Us.</p>
+        <a
+          href="#events"
+          class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold shadow hover:bg-gray-100 transition"
+          >Explore Events</a
+        >
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-4xl font-extrabold text-blue-800 mb-6">About Us</h3>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          The ITIAN Club is a technology based club created in 2021. The club is
+          open to all students who are interested in technology and its
+          application in the real world. The club provides a platform for
+          students to learn about various aspects of technology and its
+          application. The club also organizes various events and workshops
+          related to technology.
+        </p>
+        <div class="mt-10 flex justify-center">
+          <img
+            src="https://via.placeholder.com/600x300"
+            alt="Club Activity"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section
+      id="why-join"
+      class="py-16 bg-gradient-to-br from-white-100 to-blue-50"
+    >
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-extrabold text-blue-700 mb-12">Why Join?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-blue-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
+          >
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">
+              Personal Growth
+            </h3>
+            <p class="text-gray-700">
+              Explore your goals, strengths, and interests while discovering
+              more about yourself in a supportive environment.
+            </p>
+          </div>
+          <div
+            class="bg-green-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
+          >
+            <h3 class="text-xl font-semibold text-green-700 mb-2">
+              Skill Development
+            </h3>
+            <p class="text-gray-700">
+              Build essential software and tech skills alongside crucial people
+              skills that enhance collaboration and communication.
+            </p>
+          </div>
+          <div
+            class="bg-yellow-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
+          >
+            <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+              Teamwork Focus
+            </h3>
+            <p class="text-gray-700">
+              Learn how to effectively work with others, enhance your teamwork
+              abilities, and grow within a close-knit club community.
+            </p>
+          </div>
+          <div
+            class="bg-purple-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
+          >
+            <h3 class="text-xl font-semibold text-purple-700 mb-2">
+              Supportive Members
+            </h3>
+            <p class="text-gray-700">
+              Engage with humble, friendly members who are always ready to help
+              and collaborate on exciting ideas and projects.
+            </p>
+          </div>
+          <div
+            class="bg-pink-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
+          >
+            <h3 class="text-xl font-semibold text-pink-700 mb-2">
+              Innovative Projects
+            </h3>
+            <p class="text-gray-700">
+              Dive into exciting tech-based projects and initiatives that
+              challenge your creativity and problem-solving abilities.
+            </p>
+          </div>
+          <div
+            class="bg-indigo-50 p-6 rounded-2xl shadow hover:shadow-lg transition duration-300"
+          >
+            <h3 class="text-xl font-semibold text-indigo-700 mb-2">
+              Community & Networking
+            </h3>
+            <p class="text-gray-700">
+              Meet like-minded individuals and expand your network with fellow
+              technology enthusiasts and future innovators.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Preview -->
+    <section
+      id="events"
+      class="py-16 bg-gradient-to-r from-blue-50 to-blue-100"
+    >
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-10">Latest Events</h3>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="bg-blue-100 p-6 rounded-xl shadow">
+            <h4 class="text-xl font-semibold mb-2">Hackathon 2025</h4>
+            <p>24-hour coding challenge with prizes.</p>
+          </div>
+          <div class="bg-purple-100 p-6 rounded-xl shadow">
+            <h4 class="text-xl font-semibold mb-2">Tech Talk Series</h4>
+            <p>Insights from industry leaders.</p>
+          </div>
+          <div class="bg-green-100 p-6 rounded-xl shadow">
+            <h4 class="text-xl font-semibold mb-2">AI Workshop</h4>
+            <p>Hands-on learning with ML tools.</p>
+          </div>
+          <div class="bg-yellow-100 p-6 rounded-xl shadow">
+            <h4 class="text-xl font-semibold mb-2">Cybersecurity Bootcamp</h4>
+            <p>Learn about online safety and threats.</p>
+          </div>
+        </div>
+        <div class="mt-6">
+          <a
+            href="events.html"
+            class="text-blue-600 font-semibold hover:underline"
+          >
+            View All Events
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section
+      id="contact"
+      class="py-16 bg-gradient-to-br from-white-100 to-blue-50"
+    >
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8">Contact Us</h3>
+        <form class="space-y-6 text-left">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full p-4 rounded border border-gray-300"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            class="w-full p-4 rounded border border-gray-300"
+          />
+          <textarea
+            placeholder="Your Message"
+            rows="5"
+            class="w-full p-4 rounded border border-gray-300"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load Navbar and Footer with jQuery -->
+    <script>
+      $(function () {
+        $("#navbar-placeholder").load("./assets/layouts/header.html");
+        $("#footer-placeholder").load("./assets/layouts/footer.html");
+      });
+    </script>
+  </body>
+</html>
