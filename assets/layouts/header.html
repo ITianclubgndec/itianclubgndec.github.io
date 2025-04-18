@@ -7,16 +7,15 @@
         class="h-10 w-auto"
       />
     </div>
+    <!-- Mobile Menu Button -->
     <button
       id="menu-button"
       class="md:hidden text-2xl text-blue-700 focus:outline-none"
     >
       <i class="fas fa-bars"></i>
     </button>
-    <nav
-      id="nav-links-desktop"
-      class="hidden md:flex space-x-6 text-lg font-medium"
-    >
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6 text-lg font-medium">
       <a
         href="./index.html"
         class="nav-link text-gray-700 hover:text-blue-600 transition"
@@ -34,37 +33,26 @@
       >
     </nav>
   </div>
+
+  <!-- Mobile Nav -->
   <div
-    id="nav-links-mobile"
-    class="md:hidden hidden flex-col space-y-2 px-4 pb-4 text-lg font-medium"
+    id="mobile-menu"
+    class="hidden md:hidden flex flex-col space-y-2 px-4 pb-4 text-lg font-medium"
   >
     <a
       href="./index.html"
-      class="nav-link text-gray-700 hover:text-blue-600 transition"
+      class="block text-gray-700 hover:text-blue-600 transition"
       >Home</a
     >
     <a
       href="./events/"
-      class="nav-link text-gray-700 hover:text-blue-600 transition"
+      class="block text-gray-700 hover:text-blue-600 transition"
       >Events</a
     >
     <a
       href="./members/"
-      class="nav-link text-gray-700 hover:text-blue-600 transition"
+      class="block text-gray-700 hover:text-blue-600 transition"
       >Members</a
     >
   </div>
-
-  <!-- Toggle Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuBtn = document.getElementById("menu-button");
-      const mobileNav = document.getElementById("nav-links-mobile");
-      if (menuBtn && mobileNav) {
-        menuBtn.addEventListener("click", () => {
-          mobileNav.classList.toggle("hidden");
-        });
-      }
-    });
-  </script>
 </header>

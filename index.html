@@ -221,7 +221,7 @@
         </div>
         <div class="mt-6">
           <a
-            href="events.html"
+            href="./events/"
             class="text-blue-600 font-semibold hover:underline"
           >
             View All Events
@@ -268,8 +268,23 @@
 
     <!-- Load Navbar and Footer with jQuery -->
     <script>
+      // Load navbar and footer
       $(function () {
-        $("#navbar-placeholder").load("./assets/layouts/header.html");
+        $("#navbar-placeholder").load(
+          "./assets/layouts/header.html",
+          function () {
+            // Now attach the event listener AFTER loading
+            const menuBtn = document.getElementById("menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            if (menuBtn && mobileMenu) {
+              menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+              });
+            }
+          }
+        );
+
         $("#footer-placeholder").load("./assets/layouts/footer.html");
       });
     </script>
