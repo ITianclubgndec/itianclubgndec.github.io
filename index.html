@@ -28,15 +28,23 @@
       html {
         scroll-behavior: smooth;
       }
+      html, body {
+  height: 100%;
+}
+
 
       .parallax {
-        background-image: url("./assets/images/TeamImg.png");
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
-      }
+  background-image: url("./assets/images/TeamImg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
 
       .parallax::before {
         content: "";
@@ -71,6 +79,14 @@
       .nav-link:hover::after {
         transform: translateX(-50%) scaleX(1);
       }
+      @media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+    background-size: cover; /* instead of contain */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
     </style>
   </head>
 
@@ -80,9 +96,11 @@
 
     <!-- Parallax Hero Section -->
     <section
-      id="landing"
-      class="parallax h-screen flex items-center justify-center text-white"
-    >
+    id="landing"
+    class="parallax min-h-[70vh] sm:h-[100vh] md:h-screen flex items-center justify-center text-white"
+  >
+  
+  
       <div class="p-8 text-center">
         <h2 class="text-5xl font-extrabold mb-4">Welcome to the ITIAN Club</h2>
         <p class="text-xl mb-6">Learn with Us, Grow with Us.</p>
@@ -221,7 +239,7 @@
         </div>
         <div class="mt-6">
           <a
-            href="./events/"
+            href="./events.html"
             class="text-blue-600 font-semibold hover:underline"
           >
             View All Events
