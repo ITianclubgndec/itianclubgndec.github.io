@@ -28,23 +28,20 @@
       html {
         scroll-behavior: smooth;
       }
-      html, body {
-  height: 100%;
-}
-
+      html,
+      body {
+        height: 100%;
+      }
 
       .parallax {
-  background-image: url("./assets/images/TeamImg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  overflow: hidden;
-}
-
-
-
+        background-image: url("./assets/images/TeamImg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+        overflow: hidden;
+      }
 
       .parallax::before {
         content: "";
@@ -80,13 +77,13 @@
         transform: translateX(-50%) scaleX(1);
       }
       @media (max-width: 768px) {
-  .parallax {
-    background-attachment: scroll;
-    background-size: cover; /* instead of contain */
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
+        .parallax {
+          background-attachment: scroll;
+          background-size: cover; /* instead of contain */
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
     </style>
   </head>
 
@@ -96,11 +93,9 @@
 
     <!-- Parallax Hero Section -->
     <section
-    id="landing"
-    class="parallax min-h-[70vh] sm:h-[100vh] md:h-screen flex items-center justify-center text-white"
-  >
-  
-  
+      id="landing"
+      class="parallax min-h-[70vh] sm:h-[100vh] md:h-screen flex items-center justify-center text-white"
+    >
       <div class="p-8 text-center">
         <h2 class="text-5xl font-extrabold mb-4">Welcome to the ITIAN Club</h2>
         <p class="text-xl mb-6">Learn with Us, Grow with Us.</p>
@@ -220,21 +215,70 @@
       <div class="max-w-6xl mx-auto px-4 text-center">
         <h3 class="text-3xl font-bold mb-10">Latest Events</h3>
         <div class="grid md:grid-cols-4 gap-8">
-          <div class="bg-blue-100 p-6 rounded-xl shadow">
-            <h4 class="text-xl font-semibold mb-2">Hackathon 2025</h4>
-            <p>24-hour coding challenge with prizes.</p>
+          <div
+            class="bg-blue-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/quiz-ph0nic.webp"
+              alt="Tech Quiz Poster"
+              class="w-full h-auto object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-blue-700">
+                QuizPh0nic
+              </h3>
+              <p class="text-gray-800">Sync Your Mind to the Quiz Beat</p>
+            </div>
           </div>
-          <div class="bg-purple-100 p-6 rounded-xl shadow">
-            <h4 class="text-xl font-semibold mb-2">Tech Talk Series</h4>
-            <p>Insights from industry leaders.</p>
+          <div
+            class="bg-purple-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/webdevarena.jpg"
+              alt="webdev-arena"
+              class="w-full h-auto object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-purple-700">
+                WebDev Arena 2025
+              </h3>
+              <p class="text-gray-800">Where Innovation Meets Interface</p>
+            </div>
           </div>
-          <div class="bg-green-100 p-6 rounded-xl shadow">
-            <h4 class="text-xl font-semibold mb-2">AI Workshop</h4>
-            <p>Hands-on learning with ML tools.</p>
+          <div
+            class="bg-green-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/gitsync.jpeg"
+              alt="Git-Sync"
+              class="w-full h-auto object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-green-700">
+                Git-Sync
+              </h3>
+              <p class="text-gray-800">
+                Simplifying Version Control with GitHub
+              </p>
+            </div>
           </div>
-          <div class="bg-yellow-100 p-6 rounded-xl shadow">
-            <h4 class="text-xl font-semibold mb-2">Cybersecurity Bootcamp</h4>
-            <p>Learn about online safety and threats.</p>
+          <div
+            class="bg-pink-100 rounded-xl shadow hover:shadow-md transition overflow-hidden"
+          >
+            <img
+              src="./assets/images/events/freshmen-induction.jpeg"
+              alt="Freshman-induction"
+              class="w-full h-auto object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-pink-700">
+                Freshman Induction
+              </h3>
+              <p class="text-gray-800">
+                Learn from industry experts, gain essential skills, and network
+                ✨
+              </p>
+            </div>
           </div>
         </div>
         <div class="mt-6">
